@@ -1,0 +1,25 @@
+{
+  "name": "object-path-mapper",
+  "version": "1.0.0",
+  "description": "Javascript Object Mapper via path",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/StayDistributed/object-path-mapper.git"
+  },
+  "keywords": [
+    "object",
+    "array",
+    "mapper",
+    "path"
+  ],
+  "author": "Michele Salvini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StayDistributed/object-path-mapper/issues"
+  },
+  "homepage": "https://github.com/StayDistributed/object-path-mapper#readme"
+}
