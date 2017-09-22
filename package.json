@@ -1,6 +1,6 @@
 {
   "name": "object-path-mapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript Object Mapper via path",
   "main": "index.js",
   "scripts": {
