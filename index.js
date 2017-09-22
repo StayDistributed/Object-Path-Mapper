@@ -1,6 +1,7 @@
 module.exports = function (json, map) {
 
   function resolve (path, rootObj, originalPath) {
+
     var obj = rootObj,
         a = path.split('.');
 
@@ -9,7 +10,7 @@ module.exports = function (json, map) {
       if (k == '[]' && obj.length)
         return obj.map(function (v) { resolve(a.join('.'), v, originalPath || path); });
 
-      if (k in obj) {
+      if (k in obj && obj[k]) {
         obj = obj[k];
 
       } else {
@@ -20,10 +21,10 @@ module.exports = function (json, map) {
     }
 
     var k = a.pop(),
-        term = obj[k];
+        value = obj[k];
 
-    if (map[path])
-      obj[k] = map[path](term, path, obj);
+    if (map[originalPath])
+      obj[k] = map[originalPath](value, path, obj);
   }
 
   Object.keys(map).map(function (path) {
